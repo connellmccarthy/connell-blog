@@ -1,0 +1,30 @@
+baseURL = "https://connellmccarthy.com/"
+languageCode = "en-us"
+title = "Connell McCarthy"
+theme = "rosemary"
+enableRobotsTXT = true
+googleAnalytics = "UA-117103043-1"
+
+[params]
+    instagram = "https://www.instagram.com/connellmccarthy/"
+    dribbble = "https://dribbble.com/connellmccarthy"
+    behance = "https://www.behance.net/ConnellMcCarthy"
+    twitter = "https://twitter.com/connellmccarthy"
+    linkedin = "https://www.linkedin.com/in/connellmccarthy/"
+    coveo = "https://open.spotify.com/artist/4xRSaHrn9OCfNjU84QzdKJ?si=HC1XS7WdT6if9oVJMTbxJg"
+    cookies = false
+    cookies_notice = "I use cookies to give you a better viewing experience."
+
+[menu]
+
+    [[menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = "-100"
+
+    [[menu.main]]
+        identifier = "shop"
+        name = "Shop"
+        url = "https://shop.connellmccarthy.com"
+        weight = "-50"
