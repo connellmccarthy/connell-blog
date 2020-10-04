@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    {{- partial "head.html" . -}}
+    <body class="off-white">
+        {{ if .Site.Params.cookies }}
+            {{- partial "cookies.html" . -}}
+        {{ end }}
+
+        {{- partial "navigation.html" . -}}
+
+        <div class="wrapper">
+            {{ .Content }}
+            {{ range .Pages }}
+                <p>{{ .Title }}</p>
+                <p>{{ .Summary }}...</p>
+            {{ end }}
+        </div>
+
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

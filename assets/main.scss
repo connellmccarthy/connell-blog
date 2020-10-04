@@ -1,0 +1,362 @@
+$black: #000000;
+$white: #ffffff;
+$off-white: #F3F5F5;
+$grey: #706C6A;
+
+@font-face {
+    font-family: "Metro Sans";
+    src: url('/fonts/Metro-Sans-Bold.woff') format('woff'),
+        url('/fonts/Metro-Sans-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Metro Sans";
+    src: url('/fonts/Metro-Sans-Semi-Bold.woff') format('woff'),
+        url('/fonts/Metro-Sans-Semi-Bold.woff2') format('woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Metro Sans";
+    src: url('/fonts/Metro-Sans-Medium.woff') format('woff'),
+        url('/fonts/Metro-Sans-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Metro Sans";
+    src: url('/fonts/Metro-Sans-Regular.woff') format('woff'),
+        url('/fonts/Metro-Sans-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Metro Sans";
+    src: url('/fonts/Metro-Sans-Light.woff') format('woff'),
+        url('/fonts/Metro-Sans-Light.woff2') format('woff2');
+    font-weight: 300;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Metro Sans", Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    color: $black;
+
+    &.white {
+        background: $white;
+    }
+    &.off-white {
+        background: $off-white;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.wrapper {
+    width: 85%;
+    max-width: 1600px;
+    margin:auto;
+
+    &.flex {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+h1 {
+    font-size: 2.4em;
+    line-height: 2em;
+    width: 75%;
+    font-weight: 100;
+
+    a {
+        font-weight: 700;
+    }
+}
+
+h2 {
+    font-size: 1.8em;
+    line-height: 2em;
+    font-weight: 400;
+    width: 40%;
+    
+    &.wide {
+        width: 60%;
+    }
+
+    &.full_wide {
+        width: 100%;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+
+    i {
+        position: relative;
+        left: 5px;
+        transition: left 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+
+    &:after {
+        content: "";
+        height: 1px;
+        width: 0px;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        background: $grey;
+        transition: width 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+
+    &:hover {
+        color: $grey;
+
+        i {
+            left: 10px;
+        }
+
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+.notice {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    padding: 0 20px;
+    background: $black;
+    color: $white;
+    display: flex;
+    align-items: baseline;
+    z-index: 99;
+
+    p {
+        position: relative;
+        margin-right: 30px;
+
+        &:after {
+            content: "";
+            height: 100%;
+            width: 1px;
+            background: #3D3D3D;
+            position: absolute;
+            bottom: 0;
+            right: -15px;
+        }
+    }
+    a {
+        color: inherit;
+
+        &:after {
+            background: $white;
+        }
+    }
+}
+
+.section {
+    margin-top: 200px;
+}
+
+.col {
+    display: flex;
+    align-items: flex-end;
+
+    div {
+        margin: 0 40px;
+    }
+
+    div:first-child {
+        margin: 0 40px 0 0;
+    }
+}
+
+.nav {
+    padding: 50px 0;
+    width: 100%;
+
+    a.site_name {
+        &:after {
+            width: 100%;
+        }
+    }
+
+    .nav_menu {
+
+        li {
+            display: inline-flex;
+            margin: 0 15px;
+
+            &.active {
+                a {
+                    font-weight: 700;
+                }
+            }
+        }
+        li:first-child {
+            margin: 0 15px 0 0;
+        }
+    }
+
+    &.black {
+        background: $black;
+        color: $white;
+    }
+    &.white {
+        background: $white;
+        color: $black;
+    }
+    &.off-white {
+        background: $off-white;
+        color: $black;
+    }
+}
+
+.hero {
+    background: $black;
+    color: $white;
+    margin: 0;
+    padding: 100px 0;
+
+    .projects_box {
+        height: fit-content;
+        width: 100%;
+        margin: 200px 0 50px 0;
+        padding: 0;
+
+        img {
+            width: 100%;
+            padding: 0;
+        }
+
+        video {
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .controls {
+            font-size: 1em;
+            text-align: right;
+
+            i {
+                padding: 20px;
+                border-radius: 2px;
+            }
+
+            a {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.about {
+
+    p {
+        text-align: right;
+    }
+    img {
+        width: 65%;
+        margin: 200px 0 0 0;
+    }
+}
+
+.clients {
+
+    .col {
+        width: 100%;
+
+        ul {
+            width: 100%;
+            color: $grey;
+            font-size: 1.2em;
+
+            li {
+                margin: 30px 0;
+            }
+
+            &:first-child {
+                padding-left: 100px;
+            }
+        }
+    }
+}
+
+.articles_heading {
+    display: flex;
+    align-items: center;
+
+    h2 {
+        width: 50%;
+    }
+}
+
+.articles {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 0 0;
+
+    .article {
+        width: calc(50% - 10px);
+
+        .thumbnail {
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+
+            img {
+                visibility: hidden;
+            }
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 1.3em;
+            margin: 30px 0 20px 0;
+        }
+
+        p {
+            color: $grey;
+            font-size: 1em;
+            line-height: 2em;
+            margin: 10px 0 20px 0;
+        }
+    }
+}
+
+.footer {
+    padding: 0 0 5% 0;
+
+    p {
+        font-weight: 400;
+        color: $grey;
+    }
+
+    .col {
+        margin-top: 35px;
+    }
+
+    .socials {
+        margin: 50px 0 0 0;
+
+        li {
+            display: inline-flex;
+            margin: 0 15px;
+        }
+        li:first-child {
+            margin: 0 15px 0 0;
+        }
+    }
+}

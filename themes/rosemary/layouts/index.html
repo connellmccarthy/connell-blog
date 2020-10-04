@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    {{- partial "head.html" . -}}
+    <body>
+        {{ if .Site.Params.cookies }}
+            {{- partial "cookies.html" . -}}
+        {{ end }}
+
+        {{- partial "navigation.html" . -}}
+
+        {{- partial "homepage_hero.html" . -}}
+        {{- partial "homepage_about.html" . -}}
+        {{- partial "homepage_clients.html" . -}}
+
+        <div class="section wrapper">
+            <div class="articles_heading">
+                <h2>I try to write about stuff I find interesting.</h2>
+                <a href="/article/">View all articles <i class="fal fa-arrow-right"></i></a>
+            </div>
+            <div class="articles">
+                {{ range where .Site.Pages "Section" "article" }}
+                    {{ range first 10 .Pages }}
+                        <div class="article">
+                            {{ $original := .Resources.GetMatch "thumbnail" }}
+                            {{ $thumb := $original.Resize "700x" }}
+                            <div class="thumbnail" style="background-image: url('{{ $thumb.RelPermalink }}')">
+                                <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}">
+                            </div>
+                            <h3>{{ .Title }}</h3>
+                            <p>{{ slicestr .Summary 0 200 }}...</p>
+                            <a href="{{ .Permalink }}">Read article <i class="fal fa-arrow-right"></i></a>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

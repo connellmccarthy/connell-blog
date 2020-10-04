@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    {{- partial "head.html" . -}}
+    <body>
+        {{ if .Site.Params.cookies }}
+            {{- partial "cookies.html" . -}}
+        {{ end }}
+
+        {{- partial "navigation.html" . -}}
+
+        <div class="wrapper">
+            <h1>Error 404</h1>
+            <p>Sorry! The page you were looking for, can't be found.</p>
+        </div>
+
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

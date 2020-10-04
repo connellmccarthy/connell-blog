@@ -1,0 +1,10 @@
+<title>{{ .Site.Title }} — {{ .Title }}</title>
+{{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+<script src="https://kit.fontawesome.com/be9fc87a0c.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favico/favicon-16x16.png">
+<link rel="manifest" href="favico/site.webmanifest">
+{{ template "_internal/google_analytics.html" . }}

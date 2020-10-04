@@ -1,0 +1,11 @@
+<div class="notice">
+    <p>{{ .Site.Params.cookies_notice }}</p>
+    <a href="#" id="cookies_close">Okay</a>
+</div>
+
+<script type="text/javascript">
+    $('#cookies_close').click(function() {
+        $('.notice').fadeOut();
+        event.preventDefault();
+    });
+</script>
