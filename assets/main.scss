@@ -314,10 +314,10 @@ a {
         .thumbnail {
             background-size: cover;
             background-position: center;
-            height: 250px;
+            height: fit-content;
 
             img {
-                visibility: hidden;
+                width: 100%;
             }
         }
 
