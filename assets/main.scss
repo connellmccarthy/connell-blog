@@ -251,11 +251,18 @@ a {
             i {
                 padding: 20px;
                 border-radius: 2px;
+                left: 0;
             }
 
             a {
                 &:after {
                     display: none;
+                }
+
+                &:hover {
+                    i {
+                        left: 0;
+                    }
                 }
             }
         }
