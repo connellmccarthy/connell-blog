@@ -4,12 +4,14 @@
     {{ $variant = "black" }}
 {{ end }}
 
+<div class="loading"></div>
+
 <div class="nav {{ $variant }}">
     <div class="wrapper flex">
-        <p><a class="site_name" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> &mdash; multi-faceted, Canadian creative.</p>
+        <p><a class="site_name local" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> &mdash; multi-faceted, Canadian creative.</p>
         <ul class="nav_menu">
             {{ range .Site.Menus.main }}
-            <li class="nav_link {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}"><a href="{{ .URL }}">{{ .Name }}</a></li>
+            <li class="nav_link {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}"><a {{ if hasPrefix .URL "https" }}{{ else }}class="local"{{ end }} href="{{ .URL }}">{{ .Name }}</a></li>
             {{ end }}
         </ul>
     </div>
