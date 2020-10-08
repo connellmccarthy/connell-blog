@@ -3,6 +3,9 @@ $white: #ffffff;
 $off-white: #F3F5F5;
 $grey: #706C6A;
 
+$mobile-break: 768px;
+$tablet-break: 1100px;
+
 @font-face {
     font-family: "Metro Sans";
     src: url('/fonts/Metro-Sans-Bold.woff') format('woff'),
@@ -65,6 +68,16 @@ ul {
     &.flex {
         display: flex;
         justify-content: space-between;
+
+        @media screen and (max-width: $mobile-break){
+            display: block;
+        }
+
+        @media screen and (max-width: $tablet-break) {
+            &.clients {
+                display: block;
+            }
+        }
     }
 }
 
@@ -77,6 +90,12 @@ h1 {
     a {
         font-weight: 700;
     }
+
+    @media screen and (max-width: $mobile-break) {
+        width: 100%;
+        font-size: 2em;
+        line-height: 1.5em;
+    }
 }
 
 h2 {
@@ -87,9 +106,19 @@ h2 {
     
     &.wide {
         width: 60%;
+
+        @media screen and (max-width: $mobile-break) {
+            width: 100%;
+        }
     }
 
     &.full_wide {
+        width: 100%;
+    }
+
+    @media screen and (max-width: $mobile-break) {
+        font-size: 1.4em;
+        line-height: 2em;
         width: 100%;
     }
 }
@@ -162,10 +191,24 @@ a {
             background: $white;
         }
     }
+
+    @media screen and (max-width: $mobile-break) {
+        bottom: 20px;
+        right: auto;
+        left: 50%;
+        width: 85%;
+        align-items: center;
+
+        transform: translateX(-50%);
+    }
 }
 
 .section {
     margin-top: 200px;
+
+    @media screen and (max-width: $mobile-break) {
+        margin-top: 90px;
+    }
 }
 
 .col {
@@ -174,10 +217,22 @@ a {
 
     div {
         margin: 0 40px;
+
+        @media screen and (max-width: $mobile-break) {
+            margin: 0;
+        }
     }
 
     div:first-child {
         margin: 0 40px 0 0;
+
+        @media screen and (max-width: $mobile-break) {
+            margin: 0 0 50px 0;
+        }
+    }
+
+    @media screen and (max-width: $mobile-break) {
+        display: block;
     }
 }
 
@@ -205,9 +260,18 @@ a {
     padding: 50px 0;
     width: 100%;
 
+    @media screen and (max-width: $mobile-break) {
+        padding: 20px 0;
+    }
+
     a.site_name {
         &:after {
             width: 100%;
+        }
+        @media screen and (max-width: $mobile-break) {
+            display: block;
+            width: fit-content;
+            margin-bottom: 15px;
         }
     }
 
@@ -225,6 +289,13 @@ a {
         }
         li:first-child {
             margin: 0 15px 0 0;
+        }
+
+        @media screen and (max-width: $mobile-break) {
+            margin-top: 40px;
+            padding: 30px 0;
+            border-top: 1px solid darken($off-white, 75%);
+            border-bottom: 1px solid darken($off-white, 75%);
         }
     }
 
@@ -286,6 +357,18 @@ a {
                 }
             }
         }
+
+        @media screen and (max-width: $mobile-break) {
+            margin: 70px 0;
+        }
+    }
+
+    @media screen and (max-width: $mobile-break) {
+        padding: 20px 0;
+
+        h1 {
+            margin: 0;
+        }
     }
 }
 
@@ -308,7 +391,13 @@ a {
         &__inner{
           overflow: hidden;
         }
-      }
+
+        @media screen and (max-width: $tablet-break) {
+            float: unset;
+            width: 100%;
+            margin: 90px 0;
+        }
+    }
 }
 
 .clients {
@@ -316,17 +405,39 @@ a {
     .col {
         width: 100%;
 
+        @media screen and (max-width: $mobile-break) {
+            display: flex;
+        }
+
         ul {
             width: 100%;
             color: $grey;
             font-size: 1.2em;
 
+            @media screen and (max-width: $mobile-break) {
+                font-size: 1em;
+            }
+
             li {
                 margin: 30px 0;
+
+                @media screen and (max-width: $mobile-break) {
+                    margin: 15px 0;
+                }
             }
 
             &:first-child {
                 padding-left: 100px;
+
+                @media screen and (max-width: $tablet-break) {
+                    padding-left: 0;
+                }
+            }
+
+            &:last-child {
+                @media screen and (max-width: $mobile-break) {
+                    padding-left: 30px;
+                }
             }
         }
     }
@@ -338,6 +449,18 @@ a {
 
     h2 {
         width: 50%;
+    }
+
+    @media screen and (max-width: $tablet-break) {
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width: $mobile-break) {
+        display: block;
+
+        h2 {
+            width: 100%;
+        }
     }
 }
 
@@ -371,6 +494,14 @@ a {
             line-height: 2em;
             margin: 10px 0 20px 0;
         }
+
+        @media screen and (max-width: $mobile-break) {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $mobile-break) {
+        display: block;
     }
 }
 
@@ -392,9 +523,17 @@ a {
         li {
             display: inline-flex;
             margin: 0 15px;
+
+            @media screen and (max-width: $mobile-break) {
+                margin: 0 30px 30px 0;
+            }
         }
         li:first-child {
             margin: 0 15px 0 0;
+
+            @media screen and (max-width: $mobile-break) {
+                margin: 0 30px 30px 0;
+            }
         }
     }
 }
