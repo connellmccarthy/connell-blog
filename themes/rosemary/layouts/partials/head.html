@@ -1,8 +1,10 @@
 <title>{{ .Site.Title }} — {{ .Title }}</title>
 {{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://kit.fontawesome.com/be9fc87a0c.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script src="/js/main.js"></script>
 <link rel="apple-touch-icon" sizes="180x180" href="/favico/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favico/favicon-32x32.png">

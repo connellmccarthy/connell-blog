@@ -189,7 +189,7 @@ a {
     top: 0;
     right: 0;
     z-index: 99;
-    transition: width 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: width 0.8s cubic-bezier(0.87, 0, 0.13, 1);
 
     &.black {
         background: $black;
@@ -291,13 +291,24 @@ a {
 
 .about {
 
-    p {
-        text-align: right;
-    }
     img {
-        width: 65%;
-        margin: 200px 0 0 0;
+        width: 100%;
+        display: block;
+        height: auto;
     }
+
+    .image{
+        width: 65%;
+        margin-top: 200px;
+        overflow: hidden;
+        float: right;
+        clear: both;
+        margin-bottom: 200px;
+        
+        &__inner{
+          overflow: hidden;
+        }
+      }
 }
 
 .clients {

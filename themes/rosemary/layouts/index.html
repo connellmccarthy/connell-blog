@@ -13,14 +13,14 @@
         {{- partial "homepage_clients.html" . -}}
 
         <div class="section wrapper">
-            <div class="articles_heading">
+            <div class="articles_heading" data-aos="fade-in">
                 <h2>I try to write about stuff I find interesting.</h2>
                 <a class="local" href="/article/">View all articles <i class="fal fa-arrow-right"></i></a>
             </div>
             <div class="articles">
                 {{ range where .Site.Pages "Section" "article" }}
                     {{ range first 10 .Pages }}
-                        <div class="article">
+                        <div class="article" data-aos="fade-in">
                             {{ $original := .Resources.GetMatch "thumbnail" }}
                             {{ $thumb := $original.Fill "600x300" }}
                             <div class="thumbnail">
@@ -36,6 +36,5 @@
         </div>
 
         {{- partial "footer.html" . -}}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </body>
 </html>
