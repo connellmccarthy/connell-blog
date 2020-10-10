@@ -9,11 +9,23 @@
         {{- partial "navigation.html" . -}}
 
         <div class="wrapper">
-            {{ .Content }}
-            {{ range .Pages }}
-                <p>{{ .Title }}</p>
-                <p>{{ .Summary }}...</p>
-            {{ end }}
+            <div class="list_heading" data-aos="fade-in">
+                {{ .Content }}
+            </div>
+            <div class="articles">
+                {{ range .Pages }}
+                    <div class="article" data-aos="fade-in">
+                        {{ $original := .Resources.GetMatch "thumbnail" }}
+                        {{ $thumb := $original.Fill "600x300" }}
+                        <div class="thumbnail">
+                            <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}">
+                        </div>
+                        <h3>{{ .Title }}</h3>
+                        <p>{{ slicestr .Summary 0 200 }}...</p>
+                        <a class="local" href="{{ .Permalink }}">Read article <i class="fal fa-arrow-right"></i></a>
+                    </div>
+                {{ end }}
+            </div>
         </div>
 
         {{- partial "footer.html" . -}}
