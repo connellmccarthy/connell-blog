@@ -5,10 +5,12 @@ $(document).ready(function() {
         transition(loc);
         event.preventDefault();
     });
+    $('.btn_nav_mobile').click(function() {
+        showMenu();
+    });
 });
 
 function transition(loc) {
-    console.log('clicked: ' + loc);
     if (loc == '/' || loc == 'http://localhost:1313/' || loc == "http://localhost:1313/") {
         $('.loading').addClass('black');
     }
@@ -16,4 +18,17 @@ function transition(loc) {
     setTimeout(function() {
         window.location.assign(loc);
     },800);
+}
+
+function showMenu() {
+    console.log('Clicked menu');
+    if ($('.nav_menu').hasClass('active')) {
+        $('.nav_menu').removeClass('active');
+        $('.btn_nav_mobile').removeClass('active');
+        $('body').css('overflow', 'scroll');
+    } else {
+        $('.nav_menu').addClass('active');
+        $('.btn_nav_mobile').addClass('active');
+        $('body').css('overflow', 'hidden');
+    }
 }
