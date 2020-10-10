@@ -6,6 +6,8 @@ $grey: #706C6A;
 $mobile-break: 768px;
 $tablet-break: 1100px;
 
+$easing: cubic-bezier(0.76, 0, 0.24, 1);
+
 @font-face {
     font-family: "Metro Sans";
     src: url('/fonts/Metro-Sans-Bold.woff') format('woff'),
@@ -127,12 +129,12 @@ a {
     color: inherit;
     text-decoration: none;
     position: relative;
-    transition: color 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+    transition: color 0.5s $easing;
 
     i {
         position: relative;
         left: 5px;
-        transition: left 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        transition: left 0.5s $easing;
     }
 
     &:after {
@@ -143,7 +145,7 @@ a {
         bottom: -5px;
         left: 0;
         background: $grey;
-        transition: width 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        transition: width 0.5s $easing;
     }
 
     &:hover {
@@ -244,7 +246,8 @@ a {
     top: 0;
     right: 0;
     z-index: 99;
-    transition: width 0.8s cubic-bezier(0.87, 0, 0.13, 1);
+    transition: width 0.8s $easing;
+    box-shadow: 0 0 50px rgba(0,0,0,.1);
 
     &.black {
         background: $black;
@@ -292,24 +295,149 @@ a {
         }
 
         @media screen and (max-width: $mobile-break) {
-            margin-top: 40px;
-            padding: 30px 0;
-            border-top: 1px solid darken($off-white, 75%);
-            border-bottom: 1px solid darken($off-white, 75%);
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: -16px;
+            right: -100%;
+            padding: 7.5%;
+            z-index: 97;
+            transition: right 0.8s $easing;
+            
+            &.active {
+                right: 0;
+                box-shadow: 0 0 50px rgba(0,0,0,.1);
+            }
+
+            li {
+                display: block;
+                margin: 20px 0;
+                font-size: 1.8em;
+                font-weight: 300;
+            }
+
+            li:first-child {
+                margin: 40px 0 20px;
+            }
+        }
+
+        .mobile_info {
+            position: absolute;
+            bottom: 20px;
+            display: none;
+            color: #707070;
+
+            @media screen and (max-width: $mobile-break) {
+                display: block;
+            }
+
+            p {
+                margin: 5px;
+            }
+        }
+
+        .mobile_image {
+            background: url('/img/connell-menu.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 65%;
+            width: 35%;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            display: none;
+
+            @media screen and (max-width: $mobile-break) {
+                display: block;
+            }
+        }
+    }
+
+    .btn_nav_mobile {
+        height: 30px;
+        width: 25px;
+        position: absolute;
+        top: 28px;
+        right: 7.5%;
+        z-index: 98;
+        display: none;
+
+        &:before {
+            content: "";
+            background: $black;
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            top: 8px;
+            left: 0;
+            transition: transform 0.3s $easing;
+        }
+        &:after {
+            content: "";
+            background: $black;
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            transition: transform 0.3s $easing;
+        }
+
+        &.active {
+            &:before {
+                transform: translateY(6px) rotate(45deg);
+            }
+            &:after {
+                transform: translateY(-6px) rotate(-45deg);
+            }
+        }
+
+        @media screen and (max-width: $mobile-break) {
+            display: block;
         }
     }
 
     &.black {
         background: $black;
         color: $white;
+
+        @media screen and (max-width: $mobile-break) {
+            .nav_menu {
+                background: $black;
+                .mobile_info {
+                    color: #757575;
+                }
+            }
+            .btn_nav_mobile {
+                &:before {
+                    background: $white;
+                }
+                &:after {
+                    background: $white;
+                }
+            }
+        }
     }
     &.white {
         background: $white;
         color: $black;
+
+        @media screen and (max-width: $mobile-break) {
+            .nav_menu {
+                background: $white;
+            }
+        }
     }
     &.off-white {
         background: $off-white;
         color: $black;
+
+        @media screen and (max-width: $mobile-break) {
+            .nav_menu {
+                background: $off-white;
+            }
+        }
     }
 }
 
