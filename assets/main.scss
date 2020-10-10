@@ -595,11 +595,13 @@ a {
 
 .articles {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 50px 0 0 0;
 
     .article {
         width: calc(50% - 10px);
+        margin-bottom: 50px;
 
         .thumbnail {
             background-size: cover;
@@ -663,6 +665,31 @@ a {
             @media screen and (max-width: $mobile-break) {
                 margin: 0 30px 30px 0;
             }
+        }
+    }
+}
+
+.list_heading {
+    margin-bottom: 100px;
+
+    @media screen and(max-width: $mobile-break) {
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        width: 40%;
+
+        @media screen and(max-width: $mobile-break) {
+            width: 100%;
+        }
+    }
+    p {
+        width: 40%;
+        line-height: 1.8em;
+        color: $grey;
+
+        @media screen and(max-width: $mobile-break) {
+            width: 100%;
         }
     }
 }
