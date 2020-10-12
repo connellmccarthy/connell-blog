@@ -10,7 +10,7 @@
         {{- partial "navigation.html" . -}}
 
         <div class="wrapper article-content" data-aos="fade-in">
-            {{ .Content }}
+            {{ .Content | replaceRE "<p>" "<p data-aos=\"fade-in\">" | safeHTML }}
         </div>
 
         <div class="section wrapper">
