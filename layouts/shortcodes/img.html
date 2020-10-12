@@ -3,6 +3,9 @@
   <figure class="image" data-scroll="mask">
     <div class="image__inner">
       <img src="{{$src}}" {{ with .Get "alt" }}alt="{{.}}"{{ else }}alt=""{{ end }}>
+      {{ with .Get "alt" }}
+        <figcaption>{{ . }}</figcaption>
+      {{ end }}
     </div>
   </figure>
 {{ else }}
@@ -55,8 +58,10 @@
         src="{{ $src.RelPermalink }}"
       {{ end }}
       {{ with .Get "alt" }}alt="{{.}}"{{ else }}alt=""{{ end }}>
+      {{ with .Get "alt" }}
+        <figcaption>{{ . }}</figcaption>
+      {{ end }}
     </div>
-    <figcaption>{{ .Get "alt" }}</figcaption>
   </figure>
 
   {{ end }}
