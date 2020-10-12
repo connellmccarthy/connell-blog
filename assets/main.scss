@@ -2,6 +2,8 @@ $black: #000000;
 $white: #ffffff;
 $off-white: #F3F5F5;
 $grey: #706C6A;
+$dark-grey: #303030;
+$yellow-highlight: rgba(255, 246, 36, 0.8);
 
 $mobile-break: 768px;
 $tablet-break: 1100px;
@@ -37,6 +39,11 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
     src: url('/fonts/Metro-Sans-Light.woff') format('woff'),
         url('/fonts/Metro-Sans-Light.woff2') format('woff2');
     font-weight: 300;
+}
+
+::selection {
+    background: $yellow-highlight;
+    color: $black;
 }
 
 * {
@@ -210,6 +217,37 @@ a {
 
     @media screen and (max-width: $mobile-break) {
         margin-top: 90px;
+    }
+}
+
+.image{
+    overflow: hidden;
+    margin: 0;
+    
+    &__inner{
+      overflow: hidden;
+
+      img {
+          width: 100%;
+      }
+
+      &.inline {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        img {
+            width: calc(50% - 5px);
+            margin: 5px 0;
+        }
+      }
+    }
+
+    figcaption {
+        text-align: right;
+        font-size: .8em;
+        margin-top: 10px;
+        color: $grey;
     }
 }
 
@@ -670,26 +708,76 @@ a {
 }
 
 .list_heading {
-    margin-bottom: 100px;
-
-    @media screen and(max-width: $mobile-break) {
-        margin-bottom: 50px;
-    }
 
     h2 {
-        width: 40%;
-
-        @media screen and(max-width: $mobile-break) {
-            width: 100%;
-        }
+        text-align: center;
+        margin: auto;
     }
     p {
-        width: 40%;
+        width: 60%;
         line-height: 1.8em;
         color: $grey;
 
         @media screen and(max-width: $mobile-break) {
             width: 100%;
         }
+    }
+}
+
+.pinterest-embed {
+    margin: auto;
+    text-align: center;
+}
+
+.article-content {
+    h1 {
+        width: 65%;
+        margin: 100px auto;
+        font-size: 2.3em;
+        font-weight: 500;
+
+        @media screen and (max-width: $tablet-break) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: $mobile-break) {
+            width: 100%;
+            margin: 50px auto;
+            font-size: 1.8em;
+        }
+    }
+    p {
+        position: relative;
+        width: 50%;
+        margin: 50px auto;
+        font-weight: 400;
+        font-size: 1.2em;
+        line-height: 2.5em;
+        color: $dark-grey;
+
+        @media screen and (max-width: $tablet-break) {
+            width: 70%;
+        }
+
+        @media screen and (max-width: $mobile-break) {
+            width: 100%;
+            font-size: 1em;
+        }
+
+        &:first-of-type {
+            &:after {
+                content: url('img/arrow.svg');
+                position: absolute;
+                top: 0;
+                left: -70px;
+                height: 30px;
+                width: 30px;
+                color: $dark-grey;
+            }
+        }
+    }
+
+    a {
+        background: $yellow-highlight;
     }
 }

@@ -4,6 +4,7 @@ title = "Connell McCarthy"
 theme = "rosemary"
 enableRobotsTXT = true
 googleAnalytics = "UA-117103043-1"
+summaryLength = 30
 
 [params]
     instagram = "https://www.instagram.com/connellmccarthy/"
