@@ -248,6 +248,10 @@ a {
         font-size: .8em;
         margin-top: 10px;
         color: $grey;
+
+        a {
+            text-decoration: underline;
+        }
     }
 }
 
