@@ -27,7 +27,7 @@
                                 <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}">
                             </div>
                             <h3>{{ .Title }}</h3>
-                            <p>{{ slicestr .Summary 0 200 }}...</p>
+                            <p>{{ .Summary }}...</p>
                             <a class="local" href="{{ .Permalink }}">Read article <i class="fal fa-arrow-right"></i></a>
                         </div>
                     {{ end }}

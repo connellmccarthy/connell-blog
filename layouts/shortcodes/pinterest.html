@@ -1,0 +1,5 @@
+{{ $src := .Get "src" }}
+<div class="pinterest-embed">
+    <a data-pin-do="embedBoard" data-pin-board-width="800" data-pin-scale-height="500" data-pin-scale-width="150" href="{{ $src }}"></a>
+</div>
+<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
