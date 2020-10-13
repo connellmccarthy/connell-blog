@@ -343,7 +343,7 @@ a {
             top: -16px;
             right: -100%;
             padding: 7.5%;
-            z-index: 97;
+            z-index: 96;
             transition: right 0.8s $easing;
             
             &.active {
@@ -359,7 +359,7 @@ a {
             }
 
             li:first-child {
-                margin: 40px 0 20px;
+                margin: 100px 0 20px;
             }
         }
 
@@ -438,6 +438,13 @@ a {
 
         @media screen and (max-width: $mobile-break) {
             display: block;
+        }
+    }
+
+    @media screen and (max-width: $mobile-break) {
+        p {
+            position: relative;
+            z-index: 97;
         }
     }
 
