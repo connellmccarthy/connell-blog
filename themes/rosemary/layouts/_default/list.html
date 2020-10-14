@@ -29,6 +29,8 @@
             </div>
         </div>
 
+        {{- partial "newsletter_form.html" (dict "cta_heading" "Looking for more articles?" "slug" .Title ) -}}
+
         {{- partial "footer.html" . -}}
     </body>
 </html>
