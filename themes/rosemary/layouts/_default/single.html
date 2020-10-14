@@ -13,16 +13,7 @@
             {{ .Content | replaceRE "<p>" "<p data-aos=\"fade-in\">" | safeHTML }}
         </div>
 
-        <div class="section wrapper">
-            <div class="newsletter">
-                <h2>{{ .Params.cta_heading }}</h2>
-                <p>I promise I won’t spam your inbox, and you’ll get notified whenever I publish a new article.</p>
-                <form>
-                    <input type="email" placeholder="Email address">
-                    <input type="submit">
-                </form>
-            </div>
-        </div>
+        {{- partial "newsletter_form.html" (dict "cta_heading" .Params.cta_heading "slug" .Slug ) -}}
 
         {{- partial "footer.html" . -}}
     </body>
