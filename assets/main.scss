@@ -71,6 +71,11 @@ ul {
     padding: 0;
 }
 
+#confettiCanvas {
+	position: fixed !important;
+	pointer-events:none;
+}
+
 .wrapper {
     width: 85%;
     max-width: 1600px;
@@ -842,86 +847,9 @@ a {
     }
 
     &__info {
+        transition: .5s $easing;
         width: 50%;
         margin-bottom: 20px;
-
-        &.working {
-            margin-bottom: 50px;
-
-            form {
-                justify-content: center;
-            }
-
-            .button {
-                width: 50px;
-                height: 50px;
-                padding: 0;
-                border-radius: 100px;
-                border-color: lighten($grey, 50);
-                border-width: 3px;
-                font-size: 0;
-                border-left-color: $black;
-                animation: rotating 1s 0.25s linear infinite;
-
-                @keyframes rotating {
-                    from {
-                        transform: rotate(0deg);
-                    }
-                    to {
-                        transform: rotate(360deg);
-                    }
-                }
-
-                &:hover {
-                    &:before {
-                        height: 0;
-                        width: 0;
-                    }
-                }
-
-                &__text {
-                    display: none;
-                }
-            }
-
-            .input-group {
-                display: none;
-            }
-        }
-
-        &.success {
-            margin-bottom: 50px;
-
-            form {
-                justify-content: center;
-            }
-
-            .button {
-                border-radius: 100px;
-                border-color: $black;
-                background: transparent;
-                color: $black;
-                border-width: 2px;
-                padding: 30px 34px;
-                font-size: 1.8em;
-                width: fit-content;
-
-                i {
-                    margin-right: 0;
-                }
-
-                &:hover {
-                    &:before {
-                        height: 0;
-                        width: 0;
-                    }
-                }
-            }
-
-            .input-group {
-                display: none;
-            }
-        }
 
         @media screen and (max-width: $tablet-break) {
             width: 100%;
@@ -960,6 +888,14 @@ a {
             font-size: 1em;
             padding: 25px 30px;
             width: 100%;
+
+            &:disabled {
+                color: lighten($grey, 20);
+            }
+
+            @media screen and (max-width: $mobile-break) {
+                padding: 25px 15px;
+            }
         }
 
         button {
@@ -972,40 +908,106 @@ a {
             font-weight: 500;
             font-family: $metro;
             position: relative;
-            overflow: hidden;
-            z-index: 2;
-            transition: color .6s $easing;
+            min-width: 180px;
+            transition: all 0.25s ease;
 
             i {
                 margin-right: 5px;
             }
 
-            &:before {
-                content: "";
-                position: absolute;
-                background: $black;
-                top: 50%;
-                left: -20%;
-                border-radius: 100px;
-                height: 0;
-                width: 0;
-                transform: translateY(-50%);
-                transition: .4s ease-in-out;
-                z-index: -1;
-            }
-
             &:hover {
+                background: $black;
                 color: $white;
-
-                &:before {
-                    height: 250px;
-                    width: 250px;
-                }
             }
 
             @media screen and (max-width: $mobile-break) {
                 width: 100%;
                 margin-top: 5px;
+            }
+        }
+    }
+
+    &__info {
+        &.working {
+
+            .button {
+                cursor: unset;
+                min-width: unset;
+                width: 50px;
+                height: 50px;
+                padding: 0;
+                border-radius: 100px;
+                border-color: lighten($grey, 50);
+                border-width: 3px;
+                font-size: 0;
+                border-left-color: $black;
+                animation: rotating 1s 0.25s linear infinite;
+                margin-left: 40px;
+
+                @media screen and (max-width: $mobile-break) {
+                    margin: 20px auto 0;
+                }
+
+                @keyframes rotating {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                &:hover {
+                    background: transparent;
+                }
+
+                &__text {
+                    display: none;
+                }
+            }
+        }
+
+        &.success {
+            margin-bottom: 70px;
+
+            form {
+                justify-content: center;
+            }
+
+            .button {
+                cursor: unset;
+                min-width: unset;
+                width: fit-content;
+                border-radius: 100px;
+                border-color: $black;
+                background: transparent;
+                color: $black;
+                border-width: 2px;
+                padding: 20px 24px;
+                font-size: 1.8em;
+
+                i {
+                    margin-right: 0;
+                }
+
+                &:hover {
+                    background: transparent;
+                }
+
+                &:after {
+                    content: attr(data-confirmation);
+                    position: absolute;
+                    width: 100px;
+                    bottom: -40px;
+                    left: 50%;
+                    color: $grey;
+                    font-size: .6em;
+                    transform: translateX(-50%);
+                }
+            }
+
+            .input-group {
+                display: none;
             }
         }
     }

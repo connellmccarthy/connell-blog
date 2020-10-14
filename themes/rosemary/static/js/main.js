@@ -12,6 +12,7 @@ $(document).ready(function() {
         subscribe();
         $('.newsletter__info').addClass('working');
         $('.newsletter__submit').prop('disabled', true);
+        $('.newsletter__email').prop('disabled', true);
         event.preventDefault();
     });
 });
@@ -50,6 +51,7 @@ function subscribe() {
     if (email && ref) {
         $('.newsletter_subscribe').attr('src', submitURL);
         $('.newsletter_subscribe').on('load', function() {
+            $.confetti.start();
             $('.newsletter__info').removeClass('working').addClass('success');
             $('.button__text').html('<i class="fas fa-check"></i>');
         });
