@@ -1,4 +1,10 @@
 <title>{{ .Site.Title }} — {{ .Title }}</title>
+
+<link rel="preload" href="/fonts/Metro-Sans-Medium.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/fonts/Metro-Sans-Light.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/fonts/Metro-Sans-Bold.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/fonts/Metro-Sans-Regular.woff" as="font" type="font/woff" crossorigin>
+
 {{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
