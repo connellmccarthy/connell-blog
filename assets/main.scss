@@ -10,6 +10,8 @@ $tablet-break: 1100px;
 
 $easing: cubic-bezier(0.76, 0, 0.24, 1);
 
+$metro: "Metro Sans", Helvetica, sans-serif;
+
 @font-face {
     font-family: "Metro Sans";
     src: url('/fonts/Metro-Sans-Bold.woff') format('woff'),
@@ -51,7 +53,7 @@ $easing: cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 body {
-    font-family: "Metro Sans", Helvetica, sans-serif;
+    font-family: $metro;
     margin:0;
     padding:0;
     color: $black;
@@ -790,5 +792,221 @@ a {
 
     a {
         background: $yellow-highlight;
+    }
+}
+
+.newsletter {
+    background: $white;
+    width: 100%;
+    padding: 5%;
+    box-shadow: 0 40px 15px -30px rgba(155,155,155,.1);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: $tablet-break) {
+        display: block;
+    }
+
+    &__heading {
+        width: 40%;
+        padding-right: 50px;
+        
+        h2 {
+            width: 100%;
+        }
+        p {
+            width: 100%;
+            color: $grey;
+            line-height: 2em;
+        }
+
+        @media screen and (max-width: $tablet-break) {
+            width: 100%;
+            padding-right: 0;
+            margin: auto;
+            text-align: center;
+
+            h2 {
+                margin: 5px auto;
+            }
+            p {
+                margin: 5px auto;
+            }
+        }
+
+        @media screen and (max-width: $mobile-break) {
+            text-align: left;
+        }
+    }
+
+    &__info {
+        width: 50%;
+        margin-bottom: 20px;
+
+        &.working {
+            margin-bottom: 50px;
+
+            form {
+                justify-content: center;
+            }
+
+            .button {
+                width: 50px;
+                height: 50px;
+                padding: 0;
+                border-radius: 100px;
+                border-color: lighten($grey, 50);
+                border-width: 3px;
+                font-size: 0;
+                border-left-color: $black;
+                animation: rotating 1s 0.25s linear infinite;
+
+                @keyframes rotating {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                &:hover {
+                    &:before {
+                        height: 0;
+                        width: 0;
+                    }
+                }
+
+                &__text {
+                    display: none;
+                }
+            }
+
+            .input-group {
+                display: none;
+            }
+        }
+
+        &.success {
+            margin-bottom: 50px;
+
+            form {
+                justify-content: center;
+            }
+
+            .button {
+                border-radius: 100px;
+                border-color: $black;
+                background: transparent;
+                color: $black;
+                border-width: 2px;
+                padding: 30px 34px;
+                font-size: 1.8em;
+                width: fit-content;
+
+                i {
+                    margin-right: 0;
+                }
+
+                &:hover {
+                    &:before {
+                        height: 0;
+                        width: 0;
+                    }
+                }
+            }
+
+            .input-group {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: $tablet-break) {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        margin: 75px 0 0;
+        flex-wrap: wrap;
+
+        .input-group {
+            position: relative;
+            min-width: 50%;
+            width: calc(100% - 190px);
+
+            label {
+                position: absolute;
+                top: -25px;
+                left: 0px;
+                font-size: .9em;
+                color: $grey;
+            }
+
+            @media screen and (max-width: $mobile-break) {
+                width: 100%;
+            }
+        }
+
+        input[type="email"] {
+            background: lighten($grey, 53);
+            border: none;
+            font-size: 1em;
+            padding: 25px 30px;
+            width: 100%;
+        }
+
+        button {
+            background: transparent;
+            color: $black;
+            border: 2px solid $black;
+            font-size: 1em;
+            cursor: pointer;
+            padding: 22px 40px;
+            font-weight: 500;
+            font-family: $metro;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+            transition: color .6s $easing;
+
+            i {
+                margin-right: 5px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                background: $black;
+                top: 50%;
+                left: -20%;
+                border-radius: 100px;
+                height: 0;
+                width: 0;
+                transform: translateY(-50%);
+                transition: .4s ease-in-out;
+                z-index: -1;
+            }
+
+            &:hover {
+                color: $white;
+
+                &:before {
+                    height: 250px;
+                    width: 250px;
+                }
+            }
+
+            @media screen and (max-width: $mobile-break) {
+                width: 100%;
+                margin-top: 5px;
+            }
+        }
     }
 }

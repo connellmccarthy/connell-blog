@@ -3,7 +3,8 @@ title: "Making a home"
 date: 2020-10-04T11:37:59-04:00
 draft: false
 description: "In the middle of a worldwide pandemic, we decided it was a good idea to buy a house."
-cta_heading: "If you want to follow along my journey of making this house a home, subscribe to the newsletter below."
+cta_heading: "Follow along on my journey of making this house, a home"
+slug: "making-a-home"
 resources:
 - name: thumbnail
   src: mah-thumbnail.jpg

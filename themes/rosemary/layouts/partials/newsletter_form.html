@@ -1,0 +1,24 @@
+<div class="section wrapper">
+    <div class="newsletter" data-aos="fade-in">
+        <div class="newsletter__heading">
+            <h2>{{ .cta_heading }}</h2>
+            <p>Get notified whenever I publish a new article, and I promise I will never spam your inbox.</p>
+        </div>
+        <div class="newsletter__info">
+            <form name="newsletter_form" action="" class="newsletter_form">
+                <div class="input-group">
+                    <label for="email">Email address</label>
+                    <input name="email" type="email" autocomplete="email" placeholder="your@email.com" required>
+                </div>
+                <input name="ref" type="hidden" value="{{ .slug }}">
+                <button type="submit" class="button newsletter__submit">
+                    <span class="button__text">
+                        <i class="fas fa-paper-plane"></i>
+                        Subscribe
+                    </span>
+                </button>
+            </form>
+            <iframe class="newsletter_subscribe" hidden></iframe>
+        </div>
+    </div>
+</div>
