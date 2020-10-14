@@ -16,9 +16,9 @@
 
   {{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
 
-  {{ $tinyw := default "500x q90" }}
-  {{ $smallw := default "800x q90" }}
-  {{ $mediumw := default "1200x q90" }}
+  {{ $tinyw := default "500x q90 Linear" }}
+  {{ $smallw := default "800x q90 Linear" }}
+  {{ $mediumw := default "1600x q90 Linear" }}
 
   {{/* resize the src image to the given sizes */}}
 
@@ -41,17 +41,11 @@
       <img
       {{ with .Get "sizes" }}sizes='{{.}}'
       {{ else }}
-      sizes="(min-width: 35em) 720px, 100vw"{{ end }}
-      srcset='
-      {{ if ge $src.Width "500" }}
-        {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
-      {{ end }}
-      {{ if ge $src.Width "800" }}
-        {{ with $small.RelPermalink }}, {{.}} 800w{{ end }}
-      {{ end }}
-      {{ if ge $src.Width "1200" }}
-        {{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}
-      {{ end }}'
+      sizes="(max-width: 768px) 500px, (max-width: 1100px) 800px, 1600px"{{ end }}
+      srcset='{{ if ge $src.Width "500" }}
+        {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}{{ end }}{{ if ge $src.Width "800" }}
+        {{ with $small.RelPermalink }}, {{.}} 800w{{ end }}{{ end }}{{ if ge $src.Width "1600" }}
+        {{ with $medium.RelPermalink }}, {{.}} 1600w{{ end }}{{ end }}'
       {{ if .Get (print $medium) }}
         src="{{ $medium.RelPermalink }}"
       {{ else }}
