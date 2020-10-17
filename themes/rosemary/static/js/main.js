@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    $('.loading').removeClass('active');
     $('.local').click(function(event) {
         var loc = $(this).attr('href');
         transition(loc);
@@ -24,6 +23,7 @@ function transition(loc) {
     $('.loading').addClass('active');
     setTimeout(function() {
         window.location.assign(loc);
+        $('.loading').removeClass('active');
     },800);
 }
 
