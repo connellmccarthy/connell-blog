@@ -1,10 +1,3 @@
-<title>{{ .Site.Title }} — {{ .Title }}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="description" content="{{ .Description }}">
-<meta name="keywords" content="connell, connell mccarthy, photography, design, video editing, productivity, interior design, creative, web design">
-<meta name="copyright" content="Copyright 2020 by Connell McCarthy.">
-
 <link rel="preload" href="/fonts/Metro-Sans-Medium.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="/fonts/Metro-Sans-Light.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="/fonts/Metro-Sans-Bold.woff" as="font" type="font/woff" crossorigin>
@@ -12,6 +5,23 @@
 {{ if eq .Title "Home" }}
 <link rel="preload" href="/img/showreel.mp4" as="video" type="video/mp4" crossorigin>
 {{ end }}
+
+<title>{{ .Site.Title }} — {{ .Title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="{{ .Description }}">
+<meta name="keywords" content="connell, connell mccarthy, photography, design, video editing, productivity, interior design, creative, web design">
+<meta name="copyright" content="Copyright 2020 by Connell McCarthy.">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ff6136">
 
 
 {{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
@@ -21,9 +31,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script src="/js/main.js"></script>
-<link rel="apple-touch-icon" sizes="180x180" href="/favico/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favico/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favico/favicon-16x16.png">
-<link rel="manifest" href="/favico/site.webmanifest">
+
 {{ template "_internal/google_analytics.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
