@@ -1,22 +1,38 @@
 <!DOCTYPE html>
-<html lang="en-us"><title>Connell McCarthy — Home</title>
-<link rel="preload" href="/fonts/Metro-Sans-Medium.woff" as="font" type="font/woff" crossorigin>
+<html lang="en-us"><link rel="preload" href="/fonts/Metro-Sans-Medium.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="/fonts/Metro-Sans-Light.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="/fonts/Metro-Sans-Bold.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="/fonts/Metro-Sans-Regular.woff" as="font" type="font/woff" crossorigin>
 
-<link rel="stylesheet" href="http://staging.connellmccarthy.com/main.min.e61817915e6e08a80730ef13c9eb9a1026f2534e6df73a40c722ce23f2d144e5.css">
+<link rel="preload" href="/img/showreel.mp4" as="video" type="video/mp4" crossorigin>
+
+
+<title>Connell McCarthy — Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="I&#39;m a multi-faceted, Canadian creative. I currently build products at Shopify, but outside of work I take photos, make music, and work on projects around the house.">
+<meta name="keywords" content="connell, connell mccarthy, photography, design, video editing, productivity, interior design, creative, web design">
+<meta name="copyright" content="Copyright 2020 by Connell McCarthy.">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ff6136">
+
+
+
+<link rel="stylesheet" href="https://connellmccarthy.com/main.min.9110def422eb6c94222d1a8cb439039c7a91b42ee54204a5c1b2c238b9157123.css">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://kit.fontawesome.com/be9fc87a0c.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script src="/js/main.js"></script>
-<link rel="apple-touch-icon" sizes="180x180" href="/favico/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favico/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favico/favicon-16x16.png">
-<link rel="manifest" href="/favico/site.webmanifest">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -30,6 +46,12 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://connellmccarthy.com/img/feature.jpg"/>
+
+<meta name="twitter:title" content="Home"/>
+<meta name="twitter:description" content="I&#39;m a multi-faceted, Canadian creative. I currently build products at Shopify, but outside of work I take photos, make music, and work on projects around the house."/>
 <body>
         
 
@@ -42,7 +64,7 @@ if (!doNotTrack) {
 <div class="nav black">
     <div class="btn_nav_mobile" data-aos="fade-in"></div>
     <div class="wrapper flex" data-aos="fade-in">
-        <p><a class="site_name local" href="http://staging.connellmccarthy.com/">Connell McCarthy</a> &mdash; multi-faceted, Canadian creative.</p>
+        <p><a class="site_name local" href="https://connellmccarthy.com/">Connell McCarthy</a> &mdash; multi-faceted, Canadian creative.</p>
         <ul class="nav_menu">
             
             <li class="nav_link active"><a class="local" href="/">Home</a></li>
@@ -60,14 +82,14 @@ if (!doNotTrack) {
     </div>
 </div><div class="hero">
     <div class="wrapper">
-        <h1 data-aos="fade-in">I currently build products at Shopify, but outside of work I take <a href="https://www.instagram.com/connellmccarthy/" target="_blank">photos</a>, make <a href="https://open.spotify.com/artist/4xRSaHrn9OCfNjU84QzdKJ?si=HC1XS7WdT6if9oVJMTbxJg" target="_blank">music</a>, and work on projects around the house.</h1>
+        <h1 data-aos="fade-in">I currently build products at Shopify, but outside of work I take <a href="https://www.instagram.com/connellmccarthy/" target="_blank" rel="noopener">photos</a>, make <a href="https://open.spotify.com/artist/4xRSaHrn9OCfNjU84QzdKJ?si=HC1XS7WdT6if9oVJMTbxJg" target="_blank" rel="noopener">music</a>, and work on projects around the house.</h1>
         <div class="projects_box">
-            <video id="hero_video" height="auto" width="auto" autoplay loop muted data-aos="fade-in">
+            <video id="hero_video" height="auto" width="auto" autoplay loop muted playsinline data-aos="fade-in">
                 <source src="/img/showreel.mp4" type="video/mp4">
                     Your browser does not support this video.
             </video>
             <p class="controls">
-                <a href="#" id="hero_control"><i class="fas fa-pause"></i></a>
+                <a href="#" id="hero_control" title="Play/Pause"><i class="fas fa-pause"></i></a>
             </p>
         </div>
     </div>
@@ -93,8 +115,8 @@ if (!doNotTrack) {
     <h2 class="wide" data-aos="fade-in">I call myself an all-encompassing creative because I love working on everything from design, photography, and motion design to development, interior design, and video editing. I have a passion for finding the blend between aesthetic and functionality.</h2>
     <figure class="image" data-scroll="mask">
         <div class="image__inner">
-            <img src="/img/connell.jpg">
-            <figcaption>Photo by <a href="https://www.laurenchristoffersen.com/" target="_blank">Lauren Christophersen</a></figcaption>
+            <img alt="Photo of Connell sitting on a couch." src="/img/connell.jpg">
+            <figcaption>Photo by <a href="https://www.laurenchristoffersen.com/" target="_blank" rel="noopener">Lauren Christophersen</a></figcaption>
         </div>
     </figure>
 </div><div class="section wrapper flex clients">
@@ -131,7 +153,7 @@ if (!doNotTrack) {
                             </div>
                             <h3>Making a home</h3>
                             <p>In the middle of a worldwide pandemic, we decided it was a good idea to buy a house. We had been looking at houses for a little while before the pandemic, but it was more like window shopping to give us something to do in our free time instead of scrolling endlessly through Instagram....</p>
-                            <a class="local" href="http://staging.connellmccarthy.com/article/making-a-home/">Read article <i class="fal fa-arrow-right"></i></a>
+                            <a class="local" href="https://connellmccarthy.com/article/making-a-home/">Read article <i class="fal fa-arrow-right"></i></a>
                         </div>
                     
                 
@@ -159,6 +181,7 @@ if (!doNotTrack) {
             <li><a href="https://twitter.com/connellmccarthy" target="_blank" rel="noopener">Twitter</a></li>
             <li><a href="https://www.linkedin.com/in/connellmccarthy/" target="_blank" rel="noopener">Linkedin</a></li>
         </ul>
+        <a title="Back to top" class="back-to-top" href="#">Back to top <i class="far fa-chevron-up"></i></a>
     </div>
 </div>
 <script src="/js/images.js"></script>

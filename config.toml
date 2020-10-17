@@ -1,4 +1,4 @@
-baseURL = "http://staging.connellmccarthy.com/"
+baseURL = "https://connellmccarthy.com/"
 languageCode = "en-us"
 title = "Connell McCarthy"
 theme = "rosemary"
