@@ -17,13 +17,15 @@ $(document).ready(function() {
 });
 
 function transition(loc) {
-    if (loc == '/' || loc == 'http://localhost:1313/' || loc == "http://localhost:1313/") {
+    if (loc == '/' || loc == 'https://connellmccarthy.com' || loc == 'https://connellmccarthy.com/') {
         $('.loading').addClass('black');
     }
     $('.loading').addClass('active');
     setTimeout(function() {
         window.location.assign(loc);
-        $('.loading').removeClass('active');
+        setTimeout(function() {
+            $('.loading').removeClass('active');
+        },500);
     },800);
 }
 
