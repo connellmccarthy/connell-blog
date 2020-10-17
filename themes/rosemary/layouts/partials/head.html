@@ -1,8 +1,19 @@
 <title>{{ .Site.Title }} — {{ .Title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="{{ .Description }}">
+<meta name="keywords" content="connell, connell mccarthy, photography, design, video editing, productivity, interior design, creative, web design">
+<meta name="copyright" content="Copyright 2020 by Connell McCarthy.">
+
 <link rel="preload" href="/fonts/Metro-Sans-Medium.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="/fonts/Metro-Sans-Light.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="/fonts/Metro-Sans-Bold.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="/fonts/Metro-Sans-Regular.woff" as="font" type="font/woff" crossorigin>
+{{ if eq .Title "Home" }}
+<link rel="preload" href="/img/showreel.mp4" as="video" type="video/mp4" crossorigin>
+{{ end }}
+
+
 {{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -14,6 +25,5 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favico/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favico/favicon-16x16.png">
 <link rel="manifest" href="/favico/site.webmanifest">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 {{ template "_internal/google_analytics.html" . }}
+{{ template "_internal/twitter_cards.html" . }}

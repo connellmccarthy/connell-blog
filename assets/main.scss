@@ -14,33 +14,43 @@ $metro: "Metro Sans", Helvetica, sans-serif;
 
 @font-face {
     font-family: "Metro Sans";
-    src: url('/fonts/Metro-Sans-Bold.woff') format('woff'),
+    src: local('Metro Sans'), 
+        url('/fonts/Metro-Sans-Bold.woff') format('woff'),
         url('/fonts/Metro-Sans-Bold.woff2') format('woff2');
     font-weight: 700;
+    font-display: swap;
 }
 @font-face {
     font-family: "Metro Sans";
-    src: url('/fonts/Metro-Sans-Semi-Bold.woff') format('woff'),
+    src: local('Metro Sans'), 
+        url('/fonts/Metro-Sans-Semi-Bold.woff') format('woff'),
         url('/fonts/Metro-Sans-Semi-Bold.woff2') format('woff2');
     font-weight: 600;
+    font-display: swap;
 }
 @font-face {
     font-family: "Metro Sans";
-    src: url('/fonts/Metro-Sans-Medium.woff') format('woff'),
+    src: local('Metro Sans'), 
+        url('/fonts/Metro-Sans-Medium.woff') format('woff'),
         url('/fonts/Metro-Sans-Medium.woff2') format('woff2');
     font-weight: 500;
+    font-display: swap;
 }
 @font-face {
     font-family: "Metro Sans";
-    src: url('/fonts/Metro-Sans-Regular.woff') format('woff'),
+    src: local('Metro Sans'), 
+        url('/fonts/Metro-Sans-Regular.woff') format('woff'),
         url('/fonts/Metro-Sans-Regular.woff2') format('woff2');
     font-weight: 400;
+    font-display: swap;
 }
 @font-face {
     font-family: "Metro Sans";
-    src: url('/fonts/Metro-Sans-Light.woff') format('woff'),
+    src: local('Metro Sans'), 
+        url('/fonts/Metro-Sans-Light.woff') format('woff'),
         url('/fonts/Metro-Sans-Light.woff2') format('woff2');
     font-weight: 300;
+    font-display: swap;
 }
 
 ::selection {
@@ -246,12 +256,19 @@ a {
         img {
             width: calc(50% - 5px);
             margin: 5px 0;
+            height: auto;
+            height: intrinsic;
+
+            @media screen and (max-width: $mobile-break) {
+                width: 100%;
+            }
         }
       }
     }
 
     figcaption {
-        text-align: right;
+        text-align: left;
+        line-height: 1.5em;
         font-size: .8em;
         margin-top: 10px;
         color: $grey;
@@ -694,6 +711,7 @@ a {
 
 .footer {
     padding: 0 0 5% 0;
+    position: relative;
 
     p {
         font-weight: 400;
@@ -721,6 +739,24 @@ a {
             @media screen and (max-width: $mobile-break) {
                 margin: 0 30px 30px 0;
             }
+        }
+    }
+
+    .back-to-top {
+        position: absolute;
+        right: 50px;
+        bottom: 13%;
+        color: #000;
+        background: rgba(155,155,155,.1);
+        padding: 10px 20px 10px 15px;
+
+        @media screen and (max-width: $mobile-break) {
+            position: unset;
+            right: 0;
+            bottom: 0;
+            margin: 15px 0;
+            display: block;
+            text-align: center;
         }
     }
 }
@@ -812,6 +848,10 @@ a {
 
     @media screen and (max-width: $tablet-break) {
         display: block;
+    }
+    
+    @media screen and (max-width: $mobile-break) {
+        padding: 5% 10%;
     }
 
     &__heading {

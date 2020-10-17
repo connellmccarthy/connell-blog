@@ -8,7 +8,7 @@
             <form name="newsletter_form" action="" class="newsletter_form">
                 <div class="input-group">
                     <label for="email">Email address</label>
-                    <input class="newsletter__email" name="email" type="email" autocomplete="email" placeholder="your@email.com" required>
+                    <input class="newsletter__email" id="email" name="email" type="email" autocomplete="email" placeholder="your@email.com" required>
                 </div>
                 <input name="ref" type="hidden" value="{{ .slug }}">
                 <button type="submit" class="button newsletter__submit" data-confirmation="Thank you!">
