@@ -14,33 +14,43 @@ $metro: "Metro Sans", Helvetica, sans-serif;
 
 @font-face {
     font-family: "Metro Sans";
-    src: url('/fonts/Metro-Sans-Bold.woff') format('woff'),
+    src: local('Metro Sans'), 
+        url('/fonts/Metro-Sans-Bold.woff') format('woff'),
         url('/fonts/Metro-Sans-Bold.woff2') format('woff2');
     font-weight: 700;
+    font-display: swap;
 }
 @font-face {
     font-family: "Metro Sans";
-    src: url('/fonts/Metro-Sans-Semi-Bold.woff') format('woff'),
+    src: local('Metro Sans'), 
+        url('/fonts/Metro-Sans-Semi-Bold.woff') format('woff'),
         url('/fonts/Metro-Sans-Semi-Bold.woff2') format('woff2');
     font-weight: 600;
+    font-display: swap;
 }
 @font-face {
     font-family: "Metro Sans";
-    src: url('/fonts/Metro-Sans-Medium.woff') format('woff'),
+    src: local('Metro Sans'), 
+        url('/fonts/Metro-Sans-Medium.woff') format('woff'),
         url('/fonts/Metro-Sans-Medium.woff2') format('woff2');
     font-weight: 500;
+    font-display: swap;
 }
 @font-face {
     font-family: "Metro Sans";
-    src: url('/fonts/Metro-Sans-Regular.woff') format('woff'),
+    src: local('Metro Sans'), 
+        url('/fonts/Metro-Sans-Regular.woff') format('woff'),
         url('/fonts/Metro-Sans-Regular.woff2') format('woff2');
     font-weight: 400;
+    font-display: swap;
 }
 @font-face {
     font-family: "Metro Sans";
-    src: url('/fonts/Metro-Sans-Light.woff') format('woff'),
+    src: local('Metro Sans'), 
+        url('/fonts/Metro-Sans-Light.woff') format('woff'),
         url('/fonts/Metro-Sans-Light.woff2') format('woff2');
     font-weight: 300;
+    font-display: swap;
 }
 
 ::selection {
