@@ -246,12 +246,19 @@ a {
         img {
             width: calc(50% - 5px);
             margin: 5px 0;
+            height: auto;
+            height: intrinsic;
+
+            @media screen and (max-width: $mobile-break) {
+                width: 100%;
+            }
         }
       }
     }
 
     figcaption {
-        text-align: right;
+        text-align: left;
+        line-height: 1.5em;
         font-size: .8em;
         margin-top: 10px;
         color: $grey;
@@ -812,6 +819,10 @@ a {
 
     @media screen and (max-width: $tablet-break) {
         display: block;
+    }
+    
+    @media screen and (max-width: $mobile-break) {
+        padding: 5% 10%;
     }
 
     &__heading {
