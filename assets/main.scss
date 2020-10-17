@@ -711,6 +711,7 @@ a {
 
 .footer {
     padding: 0 0 5% 0;
+    position: relative;
 
     p {
         font-weight: 400;
@@ -738,6 +739,24 @@ a {
             @media screen and (max-width: $mobile-break) {
                 margin: 0 30px 30px 0;
             }
+        }
+    }
+
+    .back-to-top {
+        position: absolute;
+        right: 50px;
+        bottom: 13%;
+        color: #000;
+        background: rgba(155,155,155,.1);
+        padding: 10px 20px 10px 15px;
+
+        @media screen and (max-width: $mobile-break) {
+            position: unset;
+            right: 0;
+            bottom: 0;
+            margin: 15px 0;
+            display: block;
+            text-align: center;
         }
     }
 }
