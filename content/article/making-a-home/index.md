@@ -1,5 +1,5 @@
 ---
-title: "Making a home"
+title: "Making A Home"
 date: 2020-10-04T11:37:59-04:00
 draft: false
 description: "In the middle of a worldwide pandemic, we decided it was a good idea to buy a house."
