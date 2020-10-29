@@ -1,7 +1,7 @@
 ---
 title: "My Home Office"
 date: 2020-10-27T17:53:30-04:00
-draft: true
+draft: false
 description: "Designing a productive space for both work and personal projects, that’s conducive to creativity."
 images:
 - /article/my-home-office/mho-thumbnail.jpg
