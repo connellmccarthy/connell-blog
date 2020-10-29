@@ -1,0 +1,14 @@
+{{ $type := .Get "data-type" }}
+{{ $name := .Get "data-name" }}
+{{ $store := .Get "data-store" }}
+{{ $url := .Get "data-url" }}
+
+<li data-aos="fade-in">
+  <div>
+    <span>{{ $type }}</span>
+    <span class="subtext">{{ $name }} from {{ $store }}</span>
+  </div>
+  <div>
+    <a href="{{ $url }}" target="_blank" rel="noopener">View product <i class="fal fa-arrow-right"></i></a>
+  </div>
+</li>
