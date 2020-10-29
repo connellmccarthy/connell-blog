@@ -1,0 +1,16 @@
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Description }}">
+{{- with $.Params.images -}}
+<meta name="og:image" content="{{ index . 0 | absURL }}"/>
+{{ else -}}
+{{- $images := $.Resources.ByType "image" -}}
+{{- $featured := $images.GetMatch "*feature*" -}}
+{{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+{{- with $featured -}}
+<meta name="og:image" content="{{ $featured.Permalink }}"/>
+{{- else -}}
+{{- with $.Site.Params.images -}}
+<meta name="og:image" content="{{ index . 0 | absURL }}"/>
+{{- end -}}
+{{- end -}}
+{{- end }}
