@@ -710,7 +710,7 @@ a {
 }
 
 .footer {
-    padding: 0 0 5% 0;
+    margin-bottom: 5%;
     position: relative;
 
     p {
@@ -744,19 +744,38 @@ a {
 
     .back-to-top {
         position: absolute;
-        right: 50px;
-        bottom: 13%;
+        right: 7%;
+        bottom: 0;
         color: #000;
-        background: rgba(155,155,155,.1);
-        padding: 10px 20px 10px 15px;
+        background: none;
+        border: none;
+        font-size: 1em;
+        font-weight: 400;
+        cursor: pointer;
+
+        i {
+            background: $black;
+            color: $white;
+            font-size: 1.1em;
+            padding: 12px 13px;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
 
         @media screen and (max-width: $mobile-break) {
             position: unset;
             right: 0;
             bottom: 0;
-            margin: 15px 0;
+            margin: 15px auto;
             display: block;
             text-align: center;
+            width: 100%;
+            background: rgba(0,0,0,.05);
+            padding: 20px;
+
+            i {
+                display: none;
+            }
         }
     }
 }
