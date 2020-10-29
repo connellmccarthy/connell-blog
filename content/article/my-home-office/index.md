@@ -12,7 +12,7 @@ resources:
   src: mho-thumbnail.jpg
 ---
 
-# Designing a productive space for both work and personal projects, that’s conducive to creativity.
+# Designing a productive space that’s conducive to creativity for both work, and personal projects.
 
 When looking for our home I was very adamant about finding a place that served my needs for my work from home day-job, but also my after-hours creative projects like music, design, photography, etc. While I was working from home prior to moving, my drive to create personal work dropped since I was spending my 8-hour working day in the same place as where I would continue to work at night. Much like when your hobbies start to feel like work, you need that separation between, projects that are for yourself and projects that are directed for/by others. That meant, the new home needed to have the space to allow two different workstations either in the same, or different rooms.
 
