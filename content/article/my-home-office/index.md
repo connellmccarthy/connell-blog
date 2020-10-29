@@ -54,7 +54,7 @@ At the end of the day, designing a creative space is a very personal thing. Itâ€
 Here's a list of my peripherals and hardware that I use for everyday working.
 
 {{< ul class="product-list" >}}
-  {{< li data-type="Chair" data-name="Cove" data-store="Structube" data-url="https://www.structube.com/en/tokyo-desk-180cm-53-01-10?pid=11600" >}}
+  {{< li data-type="Chair" data-name="Cove" data-store="Structube" data-url="https://www.structube.com/en/cove-office-chair-28-68-56?pid=18055" >}}
   {{< li data-type="Desk" data-name="Tokyo" data-store="Structube" data-url="https://www.structube.com/en/tokyo-desk-180cm-53-01-10?pid=11600" >}}
   {{< li data-type="Monitor" data-name="32\" Ultra-wide" data-store="LG" data-url="https://www.lg.com/us/monitors/lg-34UM68-P-ultrawide-monitor" >}}
   {{< li data-type="Keyboard" data-name="K4 Wireless Mechanical Keyboard" data-store="Keychron" data-url="https://www.keychron.com/products/keychron-k4-wireless-mechanical-keyboard" >}}
