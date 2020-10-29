@@ -14,6 +14,9 @@ $(document).ready(function() {
         $('.newsletter__email').prop('disabled', true);
         event.preventDefault();
     });
+    $('.back-to-top').click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+    });
 });
 
 function transition(loc) {
