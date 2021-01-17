@@ -151,6 +151,7 @@ h2 {
 
 a {
     color: inherit;
+    display: inline-block;
     text-decoration: none;
     position: relative;
     transition: color 0.5s $easing;
@@ -521,6 +522,47 @@ a {
     margin: 0;
     padding: 100px 0;
 
+    a.hero_link {
+      &:before {
+          content: "";
+          width: 100%;
+          height: 2px;
+          background: $white;
+          position: absolute;
+          right: 0;
+          bottom: 5px;
+      }
+      &:after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: $grey;
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+      }
+      &:not(:hover) {
+        &:before {
+            transition: 1s cubic-bezier(0.22, 1, 0.36, 1);
+            transition-delay: 0.2s;
+        }
+        &:after {
+            transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+      }
+      &:hover {
+          &:before {
+              width: 0%;
+              transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+          }
+          &:after {
+              width: 100%;
+              transition: 1s cubic-bezier(0.22, 1, 0.36, 1);
+              transition-delay: 0.2s;
+          }
+      }
+    }
+
     .projects_box {
         height: fit-content;
         width: 100%;
@@ -538,25 +580,20 @@ a {
         }
 
         .controls {
-            font-size: 1em;
-            text-align: right;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1em;
 
-            i {
-                padding: 20px;
-                border-radius: 2px;
-                left: 0;
-            }
-
-            a {
-                &:after {
-                    display: none;
-                }
-
-                &:hover {
-                    i {
-                        left: 0;
-                    }
-                }
+            button {
+              appearance: none;
+              background: transparent;
+              color: $white;
+              border-radius: 4px;
+              border: 2px solid $white;
+              font-size: 0.8em;
+              padding: 10px 15px;
+              cursor: pointer;
             }
         }
 
