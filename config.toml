@@ -5,6 +5,21 @@ theme = "rosemary"
 enableRobotsTXT = true
 googleAnalytics = "UA-117103043-1"
 summaryLength = 30
+enableEmoji = true
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "dracula"
+    tabWidth = 4
 
 [params]
     instagram = "https://www.instagram.com/connellmccarthy/"

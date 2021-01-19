@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.local').click(function(event) {
+    $('a.local').click(function(event) {
         var loc = $(this).attr('href');
         transition(loc);
         event.preventDefault();

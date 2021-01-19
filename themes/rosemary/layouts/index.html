@@ -19,7 +19,7 @@
             </div>
             <div class="articles">
                 {{ range where .Site.Pages "Section" "article" }}
-                    {{ range first 10 .Pages }}
+                    {{ range first 2 .Pages }}
                         <div class="article" data-aos="fade-in">
                             {{ $original := .Resources.GetMatch "thumbnail" }}
                             {{ $thumb := $original.Fill "600x300" }}

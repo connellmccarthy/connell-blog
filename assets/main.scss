@@ -86,6 +86,12 @@ ul {
 	pointer-events:none;
 }
 
+p code {
+  background: rgba(0,0,0,.05);
+  padding: 4px;
+  color: #c5006c;
+}
+
 .wrapper {
     width: 85%;
     max-width: 1600px;
@@ -840,6 +846,12 @@ a {
 }
 
 .article-content {
+
+    .highlight div {
+      border-radius: 4px;
+      box-shadow: 0 150px 150px -150px rgba(50,50,50,0.6);
+    }
+
     h1 {
         width: 65%;
         margin: 100px auto;
@@ -889,6 +901,7 @@ a {
 
     a {
         background: $yellow-highlight;
+        display: unset;
     }
 
     ul.product-list {
