@@ -16,7 +16,7 @@
                 {{ range .Pages }}
                     <div class="article" data-aos="fade-in">
                         {{ if $original := .Resources.GetMatch "thumbnail" }}
-                            {{ $thumb := $original.Fill "600x300" }}
+                            {{ $thumb := $original.Fill "800x400 q90 linear" }}
                             <div class="thumbnail">
                                 <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}">
                             </div>
