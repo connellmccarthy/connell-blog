@@ -94,6 +94,6 @@ I designed it to be a full format mobile app, so I dusted off the old Xcode and 
 
 Here's a little demo of it so far.
 
-{{< vimeo 502378622 >}}
+{{< vimeo 503643833 >}}
 
 I learned a lot more than I anticipated going into this, so I highly recommend anyone out there to do something similar yourself. Take some time to broaden your T, and become more literate in a field you’re interested in. Send me a note on [Twitter](https://twitter.com/connellmccarthy) with feedback, improvements, ideas, etc. I'd love to hear them.
