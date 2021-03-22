@@ -12,4 +12,4 @@ Commit changes
 ```git add public && commit -m "commit message"```
 
 Then to deploy to Github Pages, run
-``git subtree push --prefix public origin gh-pages```
+```git subtree push --prefix public origin gh-pages```
