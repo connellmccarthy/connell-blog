@@ -6,10 +6,13 @@ My Hugo based blog / personal website
 
 ### Deploy
 To compile everything into static HTML run:
-```hugo build```
+```hugo```
+
+Navigate to public folder
+```cd public```
 
 Commit changes
-```git add public && commit -m "commit message"```
+```git add -all && git commit -m "commit message"```
 
 Then to deploy to Github Pages, run
-```git subtree push --prefix public origin gh-pages```
+```git push origin gh-pages```
