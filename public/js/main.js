@@ -22,6 +22,8 @@ $(document).ready(function() {
 function transition(loc) {
     if (loc == '/' || loc == 'https://connellmccarthy.com' || loc == 'https://connellmccarthy.com/') {
         $('.loading').addClass('black');
+    } else if (loc == 'https://shop.connellmccarthy.com/') {
+      $('.loading').addClass('white');
     }
     $('.loading').addClass('active');
     setTimeout(function() {
