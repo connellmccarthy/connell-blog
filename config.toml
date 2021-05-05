@@ -19,6 +19,10 @@ noClasses = true
 style = "dracula"
 tabWidth = 4
 [[menu.main]]
+name = "Shop"
+url = "https://shop.connellmccarthy.com/"
+weight = 2
+[[menu.main]]
 identifier = "home"
 name = "Home"
 url = "/"

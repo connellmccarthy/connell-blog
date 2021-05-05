@@ -5,7 +5,7 @@ images:
 - "/img/feature.jpg"
 menu:
   main:
-    weight: 2
+    weight: 3
 
 ---
 ## Articles
