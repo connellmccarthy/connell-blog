@@ -6,33 +6,36 @@ languageCode = "en-us"
 summaryLength = 30
 theme = "rosemary"
 title = "Connell McCarthy"
+
 [markup.highlight]
-anchorLineNos = false
-codeFences = true
-guessSyntax = false
-hl_Lines = ""
-lineAnchors = ""
-lineNoStart = 1
-lineNos = false
-lineNumbersInTable = true
-noClasses = true
-style = "dracula"
-tabWidth = 4
+  anchorLineNos = false
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  lineAnchors = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true
+  style = "dracula"
+  tabWidth = 4
+
 [[menu.main]]
-name = "Shop"
-url = "https://shop.connellmccarthy.com/"
-weight = 2
+  name = "Shop"
+  url = "https://shop.connellmccarthy.com/"
+  weight = 2
 [[menu.main]]
-identifier = "home"
-name = "Home"
-url = "/"
-weight = 1
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+
 [params]
-behance = "https://www.behance.net/ConnellMcCarthy"
-cookies = false
-cookies_notice = "I use cookies to give you a better viewing experience."
-coveo = "https://open.spotify.com/artist/4xRSaHrn9OCfNjU84QzdKJ?si=HC1XS7WdT6if9oVJMTbxJg"
-dribbble = "https://dribbble.com/connellmccarthy"
-instagram = "https://www.instagram.com/connellmccarthy/"
-linkedin = "https://www.linkedin.com/in/connellmccarthy/"
-twitter = "https://twitter.com/connellmccarthy"
+  behance = "https://www.behance.net/ConnellMcCarthy"
+  cookies = false
+  cookies_notice = "I use cookies to give you a better viewing experience."
+  coveo = "https://open.spotify.com/artist/4xRSaHrn9OCfNjU84QzdKJ?si=HC1XS7WdT6if9oVJMTbxJg"
+  dribbble = "https://dribbble.com/connellmccarthy"
+  instagram = "https://www.instagram.com/connellmccarthy/"
+  linkedin = "https://www.linkedin.com/in/connellmccarthy/"
+  twitter = "https://twitter.com/connellmccarthy"
