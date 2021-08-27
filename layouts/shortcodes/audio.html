@@ -1,0 +1,49 @@
+{{ $unique_id := replace (urlize (.Get "title")) "-" "" }}
+{{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
+
+<div class="audio" data-aos="fade-in">
+  <div class="waveform" id="waveform-{{ $unique_id }}"></div>
+  <div class="flex between a-center">
+    <div class="player">
+      <button id="trigger-{{ $unique_id }}">
+        <i id="icon-{{ $unique_id }}" class="fas fa-play" aria-hidden="true"></i>
+        <span class="visually-hidden">Play / Pause</span>
+      </button>
+    </div>
+    <div class="info">
+      <span>{{ .Get "title" }}</span>
+    </div>
+  </div>
+</div>
+<script src="https://unpkg.com/wavesurfer.js"></script>
+<script>
+  let {{ safeJS $unique_id }} = WaveSurfer.create({
+    container: '#waveform-{{ safeJS $unique_id }}',
+    barWidth: 3,
+    barHeight: 1,
+    barRadius: 3,
+    barGap: 3,
+    normalize: true,
+    waveColor: '#e0e0e0',
+    progressColor: '#FF6C62',
+    cursorWidth: 0,
+    responsive: true,
+    fillParent: true
+  });
+  {{ safeJS $unique_id }}.load('{{$src.RelPermalink}}');
+
+  let trigger{{ safeJS $unique_id }} = document.querySelector('#trigger-{{ safeJS $unique_id }}');
+  let icon{{ safeJS $unique_id }} = document.querySelector('#icon-{{ safeJS $unique_id }}');
+
+  trigger{{ safeJS $unique_id }}.addEventListener('click', function() {
+    if (icon{{ safeJS $unique_id }}.classList.contains('fa-play')) {
+      {{ safeJS $unique_id }}.play();
+      icon{{ safeJS $unique_id }}.classList.remove('fa-play');
+      icon{{ safeJS $unique_id }}.classList.add('fa-pause');
+    } else {
+      {{ safeJS $unique_id }}.pause();
+      icon{{ safeJS $unique_id }}.classList.remove('fa-pause');
+      icon{{ safeJS $unique_id }}.classList.add('fa-play');
+    }
+  });
+</script>

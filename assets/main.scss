@@ -58,6 +58,16 @@ $metro: "Metro Sans", Helvetica, sans-serif;
     color: $black;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -889,7 +899,7 @@ a {
             font-size: 1em;
         }
 
-        &:first-of-type {
+        &:first-of-type:not(.no-arrow) {
             &:after {
                 content: url('img/arrow.svg');
                 position: absolute;
@@ -1181,4 +1191,125 @@ a {
             }
         }
     }
+}
+
+.flex:not(.wrapper) {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.a-center {
+    align-items: center;
+  }
+}
+.column {
+  width: calc(50% - 4em);
+  margin: 2em;
+
+  p {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  @media screen and (max-width: $tablet-break) {
+    width: 100%;
+
+    &:first-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.video {
+  background: #EEF1F1;
+  width: 80%;
+  margin: 4em auto;
+
+  @media screen and (max-width: $tablet-break) {
+    margin: 2em auto;
+  }
+
+  @media screen and (max-width: $mobile-break) {
+    width: 100%;
+    margin: 2em auto;
+  }
+
+  h2 {
+    margin: 0 0 0.5em;
+    width: 80%;
+    line-height: 1.5em;
+  }
+  p {
+    font-size: 1em;
+    line-height: 2em;
+    color: $dark-grey;
+  }
+}
+
+.audio {
+  background: #EEF1F1;
+  padding: 25px 40px;
+  width: 60%;
+  margin: 2em auto;
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (max-width: $tablet-break) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: $mobile-break) {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .flex {
+    margin-bottom: 2em;
+    position: relative;
+    z-index: 2;
+  }
+
+  span {
+    display: block;
+    margin: 0 0 4px;
+
+    &.subtext {
+        font-size: 0.9em;
+        color: #696969;
+    }
+  }
+  .info {
+    margin-left: 1em;
+  }
+
+  button {
+    background: black;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    font-size: 1em;
+    cursor: pointer;
+
+    i {
+      margin: 0;
+      position: relative;
+
+      &.fa-play {
+        top: 1px;
+        left: 1px;
+      }
+    }
+  }
+  .waveform {
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    bottom: -64px;
+    left: 0;
+  }
 }
