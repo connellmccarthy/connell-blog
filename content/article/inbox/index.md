@@ -2,7 +2,7 @@
 title: "Shopify Inbox"
 date: 2021-08-25T17:42:00-05:00
 draft: false
-description: "How I used my passion projects to create powerful creative for Shopify Inbox."
+description: "How I used my passion projects to build powerful creative for Shopify Inbox."
 images:
 - /article/inbox/shop-thumbnail.jpg
 cta_heading: "Interested in seeing what I build next?"
