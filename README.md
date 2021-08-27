@@ -8,8 +8,8 @@ My Hugo based blog / personal website
 To compile everything into static HTML run:
 ```hugo -d public/connellmccarthy.github.io```
 
-Navigate to public folder
-```cd public```
+Navigate to public repo
+```cd public/connellmccarthy.github.io```
 
 Commit changes
 ```git add . && git commit -m "commit message"```
