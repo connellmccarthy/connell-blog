@@ -12,7 +12,7 @@ Navigate to public folder
 ```cd public```
 
 Commit changes
-```git add -all && git commit -m "commit message"```
+```git add . && git commit -m "commit message"```
 
 Then to deploy to Github Pages, run
-```git push origin gh-pages```
+```git push```
