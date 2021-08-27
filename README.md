@@ -6,7 +6,7 @@ My Hugo based blog / personal website
 
 ### Deploy
 To compile everything into static HTML run:
-```hugo```
+```hugo -d public/connellmccarthy.github.io```
 
 Navigate to public folder
 ```cd public```
