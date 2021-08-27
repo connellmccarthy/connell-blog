@@ -881,6 +881,18 @@ a {
             font-size: 1.8em;
         }
     }
+    h2 {
+      width: 50%;
+      margin: 2em auto 0;
+
+      @media screen and (max-width: $tablet-break) {
+        width: 70%;
+      }
+      @media screen and (max-width: $mobile-break) {
+        width: 100%;
+        font-size: 1em;
+      }
+    }
     p {
         position: relative;
         width: 50%;

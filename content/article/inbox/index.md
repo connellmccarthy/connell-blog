@@ -12,7 +12,7 @@ resources:
   src: shop-thumbnail.jpg
 ---
 
-# How I used my passion projects to create powerful creative for Shopify Inbox.
+# How I used my passion projects to build powerful creative for Shopify Inbox.
 
 I can’t sit still. Whether it’s taking photos, making music, or building something - my happiness is directly linked to my productivity. So, you can imagine I have a lot of hobbies in which I spend most, if not, all of my free time doing. I constantly see these hobbies as skills I can add to my toolbelt, and they help me to be a better creative.
 
@@ -23,6 +23,8 @@ I joined the Messaging UX team mid-spring of this year, it’s a small team work
 Shopify Inbox is the combination of two previous products - Shopify Chat, and Ping. Ping was an app where you could manage conversations from a variety of places like Facebook Messenger, Apple Business Chat, or the chat window on your store. Shopify Chat was the chat window you could enable on your storefront so customers could start a conversation with you. Merging the two into one product was a beautiful solution to a confusing UX flow.
 
 {{< img src="article-1.jpg" alt="Early visual explorations for the Inbox brochure page." >}}
+
+## Photography
 
 When we started diving into the work we got approval to put together a photoshoot so that we could curate original content for the [brochure page](https://www.shopify.com/inbox) and future marketing materials.
 
@@ -42,6 +44,8 @@ Pivoting ended up working out for the better. Taking inspiration from some other
 
 {{< img src="article-7.jpg" alt="Inbox brochure page wireframes." >}}
 
+## 3D rendering
+
 I’ve always had an interest in 3D rendering, and it’s actually how my career as a designer began. I used to create artwork for music artists that were primarily 3D renders, and that ended up landing me a job with the record label, Monstercat. Being able to combine that interest of mine with the work we were doing made a huge impact.
 
 With the environments I created, we wanted to give one of the scenes more purpose, so I added some merchant shelves and crafted the products that sit on them to match the ones from the photoshoot. The small details went a long way in making everything feel cohesive and the environments ended up being a large part of the Inbox brand, with a few variations we could use in additional materials.
@@ -52,6 +56,8 @@ With the environments I created, we wanted to give one of the scenes more purpos
   {{< inline-img src="article-6.png" alt="Outlines of the 3D studio environment" >}}
   {{< inline-img src="article-5.png" alt="3D studio environment" >}}
 {{< /figure >}}
+
+## Motion design
 
 Similar to the 3D render skills I had, I also used to do a lot of animation work for music releases. I’m pretty fluent in Adobe After Effects so I knew I could create some motion graphics to better communicate the product and its features. I feel like adding some motion gives better focus on what information you want your user to digest at a particular time or order, and gives you full control of the complete narrative.
 
@@ -87,6 +93,8 @@ Similar to the 3D render skills I had, I also used to do a lot of animation work
 
 Knowing that we’d have these animated pieces, I suggested using those to build out a promo video for the launch as well. [Shannon](https://www.shannonelizabethmurphy.com/), the content designer, and I worked together on getting a storyboard drafted, and I immediately started thinking about the audio since music is crucial in building the right energy and flow. The timelines were tight so licensing a song would take too long, and since we were using original content for everything else I felt like using a royalty-free track wasn’t the right fit.
 
+## Music production
+
 On the side, I make and release music under the artist names [COVEO](http://coveomusic.com/) and [Salété](https://saletemusic.com/). With COVEO being more of my more melodic and euphoric sound, and Salété being for more of my dark and electronic-themed songs. I’ve been into music for as long as I can remember, growing up playing the piano and trumpet and then combining my passion for computers with music in the early 2010s.
 
 Given this opportunity with Inbox, I asked the team to trust me and opted to make the music myself so we could create the exact tone we wanted to convey. I put together two directions, one had more funk, and the other tied into the campaign wrapper of ‘Power’. It was a no-brainer to go with the latter.
@@ -96,6 +104,8 @@ Given this opportunity with Inbox, I asked the team to trust me and opted to mak
 {{< audio src="shopify-inbox-power.mp3" title="Shopify Inbox - Power v1" >}}
 
 The video came together quite quickly. We had the timing cuts, and initial text animations right away, I included the 3D environments I created, and I even shot some footage during the photoshoot to further connect the creative. It all came together as a 45 second video to build some hype around the product, and the power it has to turn browsers into buyers.
+
+## Outcome
 
 I didn’t do this campaign alone, I was joined by the super talented Shannon Murphy who led the campaign, [Annie Berrones](https://www.linkedin.com/in/annieberrones/) who managed the project, and the whole product team at our backs. You’ll see the incredible work that Shannon did throughout the [brochure page](https://www.shopify.com/inbox) and comms, and she made my job so easy to put it all together. This product launch wouldn’t have been possible without the team, the wonderful people who helped give feedback, and finally the trust from my peers who supported me in going above and beyond. I’m glad that after all this time, I have found a role that is deeply, truly, for me.
 
